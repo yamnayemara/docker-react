@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -t memarayamany/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run memarayamany/docker-react npm run test -- --coverage
